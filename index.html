@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polytechnic Test Series</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Practice Portal</p>
+          <h1>Polytechnic Test Series</h1>
+        </div>
+        <div class="topbar-actions">
+          <div class="student-chip" id="studentChip"></div>
+          <div class="topbar-button-group" id="headerAuthButtons"></div>
+        </div>
+      </header>
+
+      <main id="app"></main>
+    </div>
+
+    <div class="modal-backdrop hidden" id="authModal">
+      <div class="modal-card">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow">Student Access</p>
+            <h2 id="authTitle">Student Login</h2>
+            <p class="auth-subtitle" id="authSubtitle"></p>
+          </div>
+          <button class="icon-btn" data-action="close-auth" aria-label="Close modal">x</button>
+        </div>
+
+        <form id="authForm" class="auth-form"></form>
+      </div>
+    </div>
+
+    <div class="loader-overlay hidden" id="loaderOverlay" aria-live="polite" aria-busy="true">
+      <div class="loader-card">
+        <div class="loader-spinner" aria-hidden="true"></div>
+        <p class="eyebrow">Loading</p>
+        <h2 id="loaderTitle">Loading platform...</h2>
+        <p id="loaderMessage" class="status-line">Preparing your dashboard.</p>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
