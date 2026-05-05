@@ -9,6 +9,9 @@ export function getOtpExpiryDate() {
   return new Date(Date.now() + env.otpExpiryMinutes * 60 * 1000);
 }
 
+
+
+
 export async function hashOtp(otp) {
   return crypto.createHash("sha256").update(String(otp)).digest("hex");
 }
