@@ -16,6 +16,9 @@ export async function hashOtp(otp) {
   return crypto.createHash("sha256").update(String(otp)).digest("hex");
 }
 
+
+
+
 export async function compareOtp(otp, hash) {
   const left = Buffer.from(await hashOtp(otp), "hex");
   const right = Buffer.from(String(hash), "hex");
